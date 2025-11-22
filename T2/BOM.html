@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EXPLORADOR DEL BOM</h1>
+    <h2>Informacion del navegador</h2>
+    <ul>
+        <li><p id="navegador"></p></li>
+        <li><p id="idioma"></p></li>
+        <li><p id = "plataforma"></p></li>
+        <li><p id ="resolucion"></p></li>
+    </ul>
+    <h2>Navegacion</h2>
+        <p id="url"></p>
+    <h2>Redireccion</h2>
+    <h2>Informacion de pantalla</h2>
+          <ul>
+        <li><p id="resolucionTotal"></p></li>
+        <li><p id="resolucionDisponible"></p></li>
+        <li><p id = "orientacion"></p></li>
+        <li><p id ="pColor"></p></li>
+        <li><p id ="pPixel"></p></li>
+    </ul>
+
+     <script>
+    document.getElementById("navegador").innerHTML = navigator.appVersion;
+
+    document.getElementById("idioma").innerHTML = "Idioma: " + navigator.language;
+
+   document.getElementById("plataforma").innerHTML = "Plataforma: " + navigator.platform;
+
+   document.getElementById("resolucion").innerHTML = "Resolucion: " + screen.width + " x " + screen.height;
+   
+   document.getElementById("url").innerHTML =  "URL actual: " + window.location.href;
+
+   document.getElementById("resolucionTotal").innerHTML = "Resolucion Total: " + screen.width + " x " + screen.height;
+   document.getElementById("resolucionDisponible").innerHTML = "Resolucion disponible: " + screen.availWidth + " x " + screen.availHeight;
+   document.getElementById("orientacion").innerHTML = "Orientación: " + screen.orientation.type;
+   document.getElementById("pColor").innerHTML = "Profundidad del color: " + screen.colorDepth + " bits";
+   document.getElementById("pPixel").innerHTML = "Profundidad del pixel: " + screen.pixelDepth + " bits";
+    </script>
+
+
+</body>
+</html>
+

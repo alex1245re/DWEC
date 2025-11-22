@@ -1,0 +1,9 @@
+body{
+    background-color: rgba(186, 218, 229, 0.479);
+}
+
+#listaCompra{
+    border: 1px solid white;
+    box-shadow: inset;
+    border-radius: 5px;
+}

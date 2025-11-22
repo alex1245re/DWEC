@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Reverse geocode tutorial</title>
+
+  <!-- Load Leaflet from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@3.0.19/dist/esri-leaflet.js"></script>
+  <script src="https://unpkg.com/esri-leaflet-vector@4.3.1/dist/esri-leaflet-vector.js"></script>
+
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <script src="https://unpkg.com/esri-leaflet-geocoder@3.1.6/dist/esri-leaflet-geocoder.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #323232;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script>
+
+    /* Use for API key authentication */
+     const accessToken = "AAPTxy8BH1VEsoebNVZXo8HurDKJS0O-eTjtGE-GoDE3tt9BIrBEOaMp4C4QQ72uGAtIp38jpXvJCQvdKwkgXccSEf0gTKhCwdKOVEHAWuQPrCl0BJM_0wUnFrSZouOM1tbY6086YwSWkNkSFiP-EJ3HUlVsW36dJK6A60QzeKtSer4hhejhB7n-gAvaEaQPboyBua6ajGbEgla2fGAuh01V5dqPFirQrrRm0Jz9imysNV0.AT1_aZmWcKCb";
+
+    // or
+
+    /* Use for user authentication */
+    // const session = await arcgisRest.ArcGISIdentityManager.beginOAuth2({
+    //   clientId: "YOUR_CLIENT_ID", // Your client ID from OAuth credentials
+    //   redirectUri: "YOUR_REDIRECT_URI", // The redirect URL registered in your OAuth credentials
+    //   portal: "YOUR_PORTAL_URL" // Your portal URL
+    // })
+
+    // const accessToken = session.token;
+
+    const basemapEnum = "arcgis/navigation";
+
+    const map = L.map("map", {
+      minZoom: 15
+    })
+
+    map.setView([37.192280225502074, -3.616346472857091], 13); 
+
+    L.esri.Vector.vectorBasemapLayer(basemapEnum, {
+      token: accessToken
+    }).addTo(map);
+
+    const layerGroup = L.layerGroup().addTo(map);
+
+    map.on("click", function (e) {
+
+      L.esri.Geocoding
+        .reverseGeocode({
+          apikey: accessToken
+        })
+        .latlng(e.latlng)
+
+        .run(function (error, result) {
+          if (error) {
+            return;
+          }
+
+          layerGroup.clearLayers();
+
+          const marker = L.marker(result.latlng).addTo(layerGroup);
+
+          const lngLatString = `${Math.round(result.latlng.lng * 100000) / 100000}, ${Math.round(result.latlng.lat * 100000) / 100000}`;
+
+          marker.bindPopup(`<b>${lngLatString}</b><p>${result.address.Match_addr}</p>`);
+          marker.openPopup();
+
+        });
+
+    });
+  </script>
+</body>
+
+</html>

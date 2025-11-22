@@ -1,0 +1,14 @@
+div{
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+}
+
+body{
+    background-color: rgb(78, 80, 82);
+}
+
+div#contador{
+    margin-left: 45vw;
+    color: white;
+    font-size: 3rem;
+}

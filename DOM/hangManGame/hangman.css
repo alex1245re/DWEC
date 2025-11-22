@@ -1,0 +1,23 @@
+div{
+    display: inline-block;
+    padding: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contenedorPalabra{
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    border: none;
+    margin: 25vh 25vh 25vh 25vh;
+}
+
+#letras{
+    border: none;
+}
+
+body{
+    background-color: rgb(185, 223, 127);
+}
