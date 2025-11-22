@@ -1,4 +1,4 @@
-# Proyecto Lista de la Compra 🛒
+# Proyecto Lista de la Compra 
 
 Este proyecto es una **aplicación web de lista de la compra** desarrollada con **React**, donde se aplican conceptos de estado, eventos y renderizado dinámico de componentes.
 
