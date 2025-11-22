@@ -1,14 +1,13 @@
-# Carpeta React
+# Proyecto Lista de la Compra 🛒
 
-Esta carpeta contiene ejercicios y proyectos realizados con **React**, como parte de mi aprendizaje en desarrollo web.
+Este proyecto es una **aplicación web de lista de la compra** desarrollada con **React**, donde se aplican conceptos de estado, eventos y renderizado dinámico de componentes.
 
-## Contenido
+## Funcionalidades
 
-### Ejercicios
-- Conjuntos de prácticas para aprender y reforzar conceptos de **React**, incluyendo componentes, estado...etc.
-
-### Proyecto
-- `my-app/` → Proyecto completo de una **lista de la compra**.
+- **Añadir artículos** a la lista mediante un formulario.  
+- **Marcar artículos** como comprados o pendientes.  
+- **Eliminar artículos** de la lista.  
+- **Interfaz dinámica** que se actualiza automáticamente al modificar la lista.  
 
 ## Tecnologías
 
@@ -18,4 +17,6 @@ Esta carpeta contiene ejercicios y proyectos realizados con **React**, como part
 
 ## Objetivo
 
-Registrar y organizar ejercicios y proyectos en React para practicar la creación de interfaces interactivas, gestión de estado y componentes reutilizables.
+El objetivo del proyecto es practicar la creación de aplicaciones interactivas en React, gestionando estado, eventos y listas de datos de manera eficiente.
+
+
