@@ -8,9 +8,28 @@
     <link rel="stylesheet" href="pelis.css">
 </head>
 <body>
+    <div id="landing">
+        <div id="hero-text">
+            <h1>Encuentra Tu Próxima Película en Segundos.</h1>
+            <h2>Acceso instantáneo a millones de títulos, directores y sinopsis.</h2>
 
-    <div class="landing">
-        <button id="btnAcceso"></button>
+        <section id="valor">
+            <h3>¿Por qué usar nuestro buscador?</h3>
+            <ul>
+                <li><span>Resultados precisos:</span> Obtenemos la información directamente de la base de datos más completa del cine.</li>
+                <li><span>Filtros por año:</span> Encuentra clásicos o los estrenos más recientes con un solo click.</li>
+                <li><span>Detalles completos:</span> Accede a director, reparto, sinopsis y calificación de IMDb al instante.</li>
+            </ul>
+        </section>
+
+    <section id="credibilidad">
+        <h3>La Opción de Miles de Cinéfilos.</h3>
+        <p>"Increíblemente rápido y fácil de usar. Mi nueva herramienta favorita para explorar cine."</p>
+        <cite>— María G., Crítica de Cine</cite>
+        <p class="stat"><span>Más de 100.000 búsquedas</span> realizadas este mes.</p>
+    </section>
+        </div>
+        <button id="Acceso">ENTRAR</button>
     </div>
 
     <div id="global">
@@ -22,15 +41,15 @@
                 <input type="input" placeholder="Año" required="" id="Año">
             </div>
         </div>
-    </div>
 
-    <div id="contenedor"></div>
+        <div id="contenedor"></div>
 
-   <div id="modal-container" class="modal-oculto">
-        <div class="modal-contenido">
-            <button onclick="cerrarModal()" id="btnCerrarModalSuperior">Cerrar</button> 
-            
-            <div id="detalle"></div>
+        <div id="modal-container" class="modal-oculto">
+            <div class="modal-contenido">
+                <button onclick="cerrarModal()" id="btnCerrarModalSuperior">Cerrar</button> 
+                
+                <div id="detalle"></div>
+            </div>
         </div>
     </div>
 </body>

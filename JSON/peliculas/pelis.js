@@ -13,7 +13,7 @@ function maquetarPeliculas(contenedor,peliculas){
     div.addEventListener("click",()=>{
 
      lanzaPeticionDetalle(carteleras.imdbID);
-     contenedor.classList.add('oculto');
+     
     })
 
     if (carteleras.Poster !== "N/A") {
@@ -98,8 +98,16 @@ window.onload = () =>{
   contenedor = document.getElementById("contenedor");
   buscadorPelis = document.getElementById("buscadorPelis");
   buscadorAño = document.getElementById("Año");
+  btnAcceso = document.getElementById("Acceso");
+  buscador = document.getElementById("global");
+  landing = document.getElementById("landing");
 
   //Eventos
+  btnAcceso.addEventListener("click",()=>{
+      landing.style.display = "none";
+      buscador.style.display = "flex";
+  });
+
   buscadorPelis.addEventListener("input",()=>{
     valorInput = buscadorPelis.value;
         if (valorInput.length >= 3) {
@@ -112,7 +120,7 @@ window.onload = () =>{
     if(e.key == "Enter"){
       pedidaAPI();
     }
-  })
+  });
   
 }
 
