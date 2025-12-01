@@ -4,8 +4,8 @@ Este repositorio contiene todos los ejercicios de la asignatura **Entorno Client
 
 ## Contenido
 
-- `ejercicios/` → Ejercicios organizados por tema.  
-- `proyectos/` → Mini-proyectos prácticos.   
+- `ejercicios` → Ejercicios organizados por tema.  
+- `proyectos` → Mini-proyectos prácticos.   
 
 ## Tecnologías
 
