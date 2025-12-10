@@ -7,7 +7,8 @@
     --primary-color: #ff0000cb; 
     --secondary-color: #333333; 
     --background-color: #1a1a1a; 
-    --text-color: #f0f0f0; 
+    --text-color: #f0f0f0;
+    --transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -25,15 +26,19 @@ body {
 }
 
 img{
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
     cursor: pointer;
-    width: 350px;
-    height: 400px;
-    object-fit: contain;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: var(--transition);
+    aspect-ratio: 2 / 3;
 }
 
 img:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transform: scale(1.05); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    z-index: 10;
 }
 
 span{
