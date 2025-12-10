@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peliculas</title>
     <script src="pelis.js"></script>
-    <link rel="stylesheet" href="pelis.css">
+    <link rel="stylesheet" href="pelis.css" />
 </head>
 <body>
-    <div id="landing">
-        <div id="hero-text">
-            <h1>Encuentra Tu Próxima Película en Segundos.</h1>
-            <h2>Acceso instantáneo a millones de títulos, directores y sinopsis.</h2>
+<div id="landing">
+    <div id="hero-text">
+        <h1>Encuentra Tu Próxima Película en Segundos.</h1>
+        <h2>
+        Acceso instantáneo a millones de títulos, directores y sinopsis.
+        </h2>
 
         <section id="valor">
-            <h3>¿Por qué usar nuestro buscador?</h3>
-            <ul>
-                <li><span>Resultados precisos:</span> Obtenemos la información directamente de la base de datos más completa del cine.</li>
-                <li><span>Filtros por año:</span> Encuentra clásicos o los estrenos más recientes con un solo click.</li>
-                <li><span>Detalles completos:</span> Accede a director, reparto, sinopsis y calificación de IMDb al instante.</li>
-            </ul>
-        </section>
-
-    <section id="credibilidad">
-        <h3>La Opción de Miles de Cinéfilos.</h3>
-        <p>"Increíblemente rápido y fácil de usar. Mi nueva herramienta favorita para explorar cine."</p>
-        <cite>— María G., Crítica de Cine</cite>
-        <p class="stat"><span>Más de 100.000 búsquedas</span> realizadas este mes.</p>
+        <h3>¿Por qué usar nuestro buscador?</h3>
+        <ul>
+        <li>
+            <span>Resultados precisos:</span> Obtenemos la información
+            directamente de la base de datos más completa del cine.
+        </li>
+        <li>
+            <span>Filtros por año:</span> Encuentra clásicos o los estrenos
+            más recientes con un solo click.
+        </li>
+        <li>
+            <span>Detalles completos:</span> Accede a director, reparto,
+            sinopsis y calificación de IMDb al instante.
+        </li>
+        </ul>
     </section>
-        </div>
-        <button id="Acceso">ENTRAR</button>
+
+        <section id="credibilidad">
+        <h3>La Opción de Miles de Cinéfilos.</h3>
+        <p>
+        "Increíblemente rápido y fácil de usar. Mi nueva herramienta
+        favorita para explorar cine."
+        </p>
+        <cite>— María G., Crítica de Cine</cite>
+        <p class="stat">
+        <span>Más de 100.000 búsquedas</span> realizadas este mes.
+        </p>
+    </section>
+    </div>
+    <button id="Acceso">ENTRAR</button>
+</div>
+
+<div id="global">
+    <label class="switch">
+    <input type="checkbox" checked="" />
+    </label>
+
+    <div class="inputs">
+    <div>
+        <input
+        type="input"
+        placeholder="Movie"
+        required=""
+        id="buscadorPelis"
+        />
     </div>
 
-    <div id="global">
-        <div class="inputs">
-            <div>
-                <input type="input"  placeholder="Pelicula/Serie" required="" id="buscadorPelis">
-            </div>
-            <div>
-                <input type="input" placeholder="Año" required="" id="Año">
-            </div>
-        </div>
+    <div>
+        <input type="input" placeholder="Año" required="" id="Año" />
+    </div>
+    </div>
 
-        <div id="contenedor"></div>
+    <button id="botonFav">Peliculas Favoritas</button>
 
-        <div id="modal-container" class="modal-oculto">
-            <div class="modal-contenido">
-                <button onclick="cerrarModal()" id="btnCerrarModalSuperior">Cerrar</button> 
-                
-                <div id="detalle"></div>
-            </div>
+    <div id="contenedor"></div>
+
+    <div id="modal-container" class="modal-oculto">
+        <div class="modal-contenido">
+            <button onclick="cerrarModal()" id="btnCerrarModalSuperior">
+            Cerrar
+            </button>
+
+            <div id="detalle"></div>
         </div>
     </div>
+</div>
+
+
+</div>
 </body>
 </html>
